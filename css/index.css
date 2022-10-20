@@ -1,0 +1,87 @@
+body {
+    margin: 0;
+    height: 100vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background-color: #ffAe6d;
+}
+.container {
+    width: 250px;
+    height: 250px;
+    border-radius: 50%;
+    border: 5px solid #CFD2CF;
+    background-color:#eeee ;
+    position: relative;
+}
+.container img {
+    width: 50px;
+    position: absolute;
+    top: 50px;
+    left: 50%;
+    transform: translateX(-50%);
+}
+.container .moment {
+    width: 100%;
+    height: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    position: relative;
+}
+.container .moment::before {
+    content: " ";
+    position: absolute;
+    width: 20px;
+    height: 20px;
+    border-radius: 50%;
+    background-color: green;
+    z-index: 4;
+}
+.container .moment div {
+    width: 7px;
+    position: absolute;
+    bottom: 50%;
+    transform-origin: bottom center;
+    border-radius: 50% 50% 0 0; 
+}
+.moment .seconds {
+    background-color: goldenrod;
+    height: 80px;
+    transform: rotate(250deg);
+}
+.moment .minutes{
+    background-color: white;
+    height: 70px;
+}
+.moment .hours {
+    background-color: white;
+    height: 50px;
+    transform: rotate(20deg);
+}
+.container span {
+    position: absolute;
+    color: white;
+    font-size: 18px;
+    text-shadow: 1px 1px 3px black;
+}
+.container span:nth-of-type(1) {
+    left: 50%;
+    top: 15px;
+    transform: translateX(-50%);
+}
+.container span:nth-of-type(2) {
+    right: 15px;
+    top: 50%;
+    transform: translateY(-50%);
+}
+.container span:nth-of-type(3) {
+    bottom: 15px;
+    left: 50%;
+    transform: translateX(-50%);
+}
+.container span:nth-of-type(4) {
+    left: 15px;
+    top: 50%;
+    transform: translateY(-50%);
+}
